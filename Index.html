@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="floating-hearts">
+        <div class="class-heart">💖</div>
+        <div class="class-heart">🌸</div>
+        <div class="class-heart">🦋</div>
+        <div class="class-heart">✨</div>
+        <div class="class-heart">💕</div>
+    </div>
+
+    <div class="container">
+        <h1 class="class-title">Happy Birthday, annu! 💕</h1>
+        <p class="class-subtitle">Today is all about celebrating you and the joy you bring to my life</p>
+
+        <div class="hearts-row">
+            <span>❤️</span><span>💖</span><span>❤️</span><span>💖</span>
+        </div>
+
+        <button class="btn" id="start-btn" onclick="startCelebration()">Start the Celebration 🪅</button>
+
+        <div id="hidden-content" class="celebration-content">
+            <h2 class="section-title">My Beautiful annu</h2>
+
+            <div class="photo-gallery">
+                <div class="img-card"><img src="IMG_1.jpg" alt="Photo 1"></div>
+                <div class="img-card"><img src="IMG_2.jpg" alt="Photo 2"></div>
+                <div class="img-card"><img src="IMG_3.jpg" alt="Photo 3"></div>
+                <div class="img-card"><img src="IMG_4.jpg" alt="Photo 4"></div>
+                <div class="img-card"><img src="IMG_5.jpg" alt="Photo 5"></div>
+            </div>
+
+            <div class="message-box">
+                <h3>A Special Message for You</h3>
+                <p>always be smiling like this my annu</p>
+                <div class="message-hearts">💖✨❤️✨💖</div>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 Made with ❤️ for the most amazing person in the world</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startCelebration() {
+            var content = document.getElementById("hidden-content");
+            var btn = document.getElementById("start-btn");
+            
+            content.classList.add("reveal");
+            btn.style.opacity = "0";
+            
+            setTimeout(function() {
+                btn.style.display = "none";
+            }, 400);
+            
+            setTimeout(function() {
+                document.getElementById("hidden-content").scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
